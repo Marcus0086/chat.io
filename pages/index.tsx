@@ -15,7 +15,7 @@ const Index = () => {
   const socket = useRef<Socket>();
 
   const socketInitialize = async () => {
-    socket.current = connect('/', {
+    socket.current = connect({
       path: '/api/socket'
     });
     socket.current.on('connect', () => {
